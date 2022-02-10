@@ -1,23 +1,28 @@
+#To print last five character of Green Revolution
 #a="Green Revolution"
 #b=len(a)
 #print("",b)
 #c=a[11:17]
 #print("",c)
 
-
+#To replicate Green Revolution 5 times
 #a="Green Revolution\n"
 #print(a   *  5 )
 
+#To find whether the uti is there in Green Revolution
 #a="Green Revolution"
 #if "uti" in a:
     #print("uti is present")
 #else:
     #print("uti is not present")
 
+#To take celcius from user and convert it into farenheit
 #c=float(input("Enter the celcius"))
 #f=c*9/5+32
 #print("The farenheit is",f)
 
+
+#To find whether the number is even or not it it is even then find the greatest number among three unique numbers
 #num1=int(input("Enter the 1 number:"))
 #num2=int(input("Enter the 2 number:"))
 #num3=int(input("Enter the 3 number:"))
@@ -30,6 +35,7 @@
 #else:
    # print("No number is greater")
 
+#To find the % of the students and assign the grades , as lond as the user wants program
 #a='Y'
 #while a=='Y' or a=='y':
      #m1=float(input("Enter the science mark:"))
