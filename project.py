@@ -1,73 +1,134 @@
 #This project is of hotel managemnet
 print("Welcome to our Hotel")
 print("Press 1:- To Book Double bed A/C room")
+print("Press 2:- To Book Single bed A/C room")
+print("Press 1:- To Book Double bed W/o AC room")
+print("Press 1:- To Book Single bed W/o AC room")
 ch=int(input("Enter your choice: "))
 if ch==1:
-    print("Facilities in Room")
-    D_A_R=['Double Bed','Full furnished A/C Room','One table' , 'One chair']
-    print("",D_A_R)
-    book=input("To book this room press yes (y): ")
-    if book=="yes" or book=="Yes" or book=="y" or book=="Y":
-        print("Rooms available in this hotel for this category is '20' ")
-        no_rm_book=int(input("Enter no. of people: "))
-        name=input("Enter your name: ")
-        email=input("Enter your email: ")
-        phone=input("Enter your mobile (number): ")
-        address=input("Enter your address: ")
-        rm=int(input("Enter No. of rooms you want to register: "))
-        avail=20-rm
-        print("No. of room availbale now: ",avail)
-        print("If you want to change your details press(c) otherwise no further changes will be made \n'If you want to continue press(y)'")
-        update = input("To change press(c), continue press(y): ")
-        if update=='c' or update=='C':
-            #re='c'
-            #while re=='c' or re=='C':
-                up=[name,email,phone,address]
-                print("'To change name press(n)'\n 'To change email press(e)'\n 'To change phone press(p)'\n 'To change address press(a)'")
-                change=input("To change your details: ")
-                if change=='n' or change=='N':
-                    up[0]=input("New name: ")
-                    up=[up[0],email,phone,address]
-                    print("New Details: ",up)
-                    enter=input("Press enter to update details/to print your receipt: ")
-                    if enter=='y' or enter=='Y':
-                        print("Thank you for booking your Room")
-                        print("Your Details: ", up)
-                        print("Your OTP for verification oy your id: ", up[0][0:2] + up[2][4:8])
-                elif change=='e' or change=='E':
-                    up[1]=input("New Email: ")
-                    up = [name, up[1], phone, address]
-                    print("New Details: ", up)
-                    enter = input("Press enter to update details/to print your receipt: ")
-                    if enter == 'y' or enter == 'Y':
-                        print("Thank you for booking your Room")
-                        print("Your Details: ", up)
-                        print("Your OTP for verification oy your id: ", up[0][0:2] + up[2][4:8])
-                elif change=='p' or change=='P':
-                    up[2]=input("New phone no.: ")
-                    up = [name, email,up[2] , address]
-                    print("New Details: ", up)
-                    enter = input("Press enter to update details/to print your receipt: ")
-                    if enter == 'y' or enter == 'Y':
-                        print("Thank you for booking your Room")
-                        print("Your Details: ", up)
-                        print("Your OTP for verification oy your id: ", up[0][0:2] + up[2][4:8])
-                elif change=='a' or change=='A':
-                    up[3]=input("New address: ")
-                    up = [name, email, phone, up[3]]
-                    print("New Details: ", up)
-                    enter = input("Press enter to update details/to print your receipt: ")
-                    if enter == 'y' or enter == 'Y':
-                        print("Thank you for booking your Room")
-                        print("Your Details: ", up)
-                        print("Your OTP for verification oy your id: ", up[0][0:2] + up[2][4:8])
-                else:
-                    print("Wrong choice")
-        elif update=='y' or update=='Y':
-            up=(name,email,phone,address)
-            print("Thank you for booking your Room")
-            print("Your Details: ",up)
-            print("Your OTP for verifiation oy your id: ", name[0] + name[1] + phone[3:8])
+    # Double A/C Room
+    list= ['Double Bed', 'Double A/C', 'Table', 'Chair']
+    print("Facilities in room", list)
+    price = 4000
+    room = 20
+    print("Price of this room/per day: ", price)
+    re = 'y'
+    while re == 'y' or re == 'Y':
+        choice = input("IF you want to book this Room press(y): ")
+        if choice == 'y' or choice == 'Y':
+            days = int(input("No. of Days you want to stay: "))
+            name = input("Enter your Name: ")
+            phone = int(input("Enter you Phone no. "))
+            email = input("Enter your email: ")
+            register = int(input("No. of rooms you want to register: "))
+            cost = (price * days) * register
+            details = [name, phone, email]
+            otp = name[0:2] + email[3:7]
+            print("Thank you for registering your room:- ")
+            print("Your Details:- ", details)
+            print("No. of days want to stay:- ", days)
+            print("No of Rooms booked:- ", register)
+            print("Room cost to pay:- ", cost)
+            print("Your OTP for check-in:- ", otp)
+            print("Room available now:- ", (20 - register))
+            re = input("If want to register again press(y): ")
+elif ch==2:
+   # single A/C Room
+   list=['Single Bed','Single A/C','Table','Chair']
+   print("Facilities in room",list)
+   price=2500
+   room=20
+   print("Price of this room/per day: ",price)
+   re='y'
+   while re=='y' or re=='Y':
+       choice=input("IF you want to book this Room press(y): ")
+       if choice=='y' or choice=='Y':
+          days=int(input("No. of Days you want to stay: "))
+          name=input("Enter your Name: ")
+          phone=int(input("Enter you Phone no. "))
+          email=input("Enter your email: ")
+          register=int(input("No. of rooms you want to register: "))
+          cost=(price*days)*register
+          details=[name,phone,email]
+          otp=name[0:2]+email[3:7]
+          print("Thank you for registering your room:- ")
+          print("Your Details:- ",details)
+          print("No. of days want to stay:- ",days)
+          print("No of Rooms booked:- ",register)
+          print("Room cost to pay:- ",cost)
+          print("Your OTP for check-in:- ",otp)
+          print("Room available now:- ",(20-register))
+          re=input("If want to register again press(y): ")
+elif ch==3:
+    # Double W/o AC Room
+    list = ['Single Bed', 'Single A/C', 'Table', 'Chair']
+    print("Facilities in room", list)
+    price = 3000
+    room = 20
+    print("Price of this room/per day: ", price)
+    re = 'y'
+    while re == 'y' or re == 'Y':
+        choice = input("IF you want to book this Room press(y): ")
+        if choice == 'y' or choice == 'Y':
+            days = int(input("No. of Days you want to stay: "))
+            name = input("Enter your Name: ")
+            phone = int(input("Enter you Phone no. "))
+            email = input("Enter your email: ")
+            register = int(input("No. of rooms you want to register: "))
+            cost = (price * days) * register
+            details = [name, phone, email]
+            otp = name[0:2] + email[3:7]
+            print("Thank you for registering your room:- ")
+            print("Your Details:- ", details)
+            print("No. of days want to stay:- ", days)
+            print("No of Rooms booked:- ", register)
+            print("Room cost to pay:- ", cost)
+            print("Your OTP for check-in:- ", otp)
+            print("Room available now:- ", (20 - register))
+            re = input("If want to register again press(y): ")
+elif ch==4:
+    # single W/o AC Room
+    list= ['Single Bed', 'Single A/C', 'Table', 'Chair']
+    print("Facilities in room", list)
+    price = 2000
+    room = 20
+    print("Price of this room/per day: ", price)
+    re = 'y'
+    while re == 'y' or re == 'Y':
+        choice = input("IF you want to book this Room press(y): ")
+        if choice == 'y' or choice == 'Y':
+            days = int(input("No. of Days you want to stay: "))
+            name = input("Enter your Name: ")
+            phone = int(input("Enter you Phone no. "))
+            email = input("Enter your email: ")
+            register = int(input("No. of rooms you want to register: "))
+            cost = (price * days) * register
+            details = [name, phone, email]
+            otp = name[0:2] + email[3:7]
+            print("Thank you for registering your room:- ")
+            print("Your Details:- ", details)
+            print("No. of days want to stay:- ", days)
+            print("No of Rooms booked:- ", register)
+            print("Room cost to pay:- ", cost)
+            print("Your OTP for check-in:- ", otp)
+            print("Room available now:- ", (20 - register))
+            re = input("If want to register again press(y): ")
+else:
+    print("Wrong choice")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
