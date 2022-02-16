@@ -61,7 +61,7 @@ elif ch==2:
           re=input("If want to register again press(y): ")
 elif ch==3:
     # Double W/o AC Room
-    list = ['Single Bed', 'Single A/C', 'Table', 'Chair']
+    list = ['Double Bed','Table', 'Chair']
     print("Facilities in room", list)
     price = 3000
     room = 20
@@ -88,7 +88,7 @@ elif ch==3:
             re = input("If want to register again press(y): ")
 elif ch==4:
     # single W/o AC Room
-    list= ['Single Bed', 'Single A/C', 'Table', 'Chair']
+    list= ['Single Bed', 'Table', 'Chair']
     print("Facilities in room", list)
     price = 2000
     room = 20
