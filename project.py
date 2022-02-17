@@ -2,8 +2,8 @@
 print("Welcome to our Hotel")
 print("Press 1:- To Book Double bed A/C room")
 print("Press 2:- To Book Single bed A/C room")
-print("Press 1:- To Book Double bed W/o AC room")
-print("Press 1:- To Book Single bed W/o AC room")
+print("Press 3:- To Book Double bed W/o AC room")
+print("Press 4:- To Book Single bed W/o AC room")
 ch=int(input("Enter your choice: "))
 if ch==1:
     # Double A/C Room
