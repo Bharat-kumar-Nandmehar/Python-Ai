@@ -20,6 +20,8 @@ while conti=='y' or conti=='Y':
       print("Name--> ",name)
       print("Roll No.--> ",roll)
       print("Class--> ",Class)
+      dict_marks={'Physics':Physics,'English':English,'Chemistry':Chemistry,'Maths':Maths,'Computer.science':Computer_science}
+      print("Marks in 5 subject--> ",dict_marks)
       print("Total marks--> ",Total_marks)
       print("Percentage--> ",percentage)
       print("Result--> Pass")
@@ -28,6 +30,8 @@ while conti=='y' or conti=='Y':
          print("Name--> ", name)
          print("Roll No.--> ", roll)
          print("Class--> ", Class)
+         dict_marks = {'Physics': Physics, 'English': English, 'Chemistry': Chemistry, 'Maths': Maths,'Computer.science': Computer_science}
+         print("Marks in 5 subject--> ", dict_marks)
          print("Total marks--> ", Total_marks)
          print("Percentage--> ", percentage)
          print("Result--> Fail")
