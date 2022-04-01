@@ -33,4 +33,10 @@ print("",type(lst))
 a=tuple(lst)
 print("",a)
 print("",type(a))'''
+'''a=int(input("Enter no.: "))
+b=int(input("Enter no.: "))
+c=(a,b)
+print("a",a,"b",b)
+d=(b,a)
+print("a",b,"b",a)'''
 
