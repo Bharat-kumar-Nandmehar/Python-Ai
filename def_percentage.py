@@ -4,6 +4,7 @@ while conti=='y' or conti=='Y':
    def calculation(Total_marks):
     cal=(Total_marks/500)*100
     return cal
+   Pass=40
    name=input("Enter your Name--> ")
    roll=input("Enter your Roll no.--> ")
    Class=input("Enter your Class--> ")
@@ -15,7 +16,7 @@ while conti=='y' or conti=='Y':
    marks_list=[Physics,English,Chemistry,Maths,Computer_science]
    Total_marks=sum(marks_list)
    percentage=calculation(Total_marks)
-   if percentage>40:
+   if percentage>Pass:
       print("Sahoday Sr. Sec. School")
       print("Name--> ",name)
       print("Roll No.--> ",roll)
@@ -37,7 +38,6 @@ while conti=='y' or conti=='Y':
          print("Result--> Fail")
    else:
       print("Some error occured , No result found")
-
    conti=input("If you want to continue press y/Y?")
 
 
