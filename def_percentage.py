@@ -27,7 +27,7 @@ while conti=='y' or conti=='Y':
       print("Total marks--> ",Total_marks)
       print("Percentage--> ",percentage)
       print("Result--> Pass")
-   elif percentage<=40:
+   elif percentage<=Pass:
          print("Sahoday Sr. Sec. School")
          print("Name--> ", name)
          print("Roll No.--> ", roll)
