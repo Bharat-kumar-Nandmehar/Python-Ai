@@ -16,12 +16,13 @@ while conti=='y' or conti=='Y':
    marks_list=[Physics,English,Chemistry,Maths,Computer_science]
    Total_marks=sum(marks_list)
    percentage=calculation(Total_marks)
+   dict_marks = {'Physics': Physics, 'English': English, 'Chemistry': Chemistry, 'Maths': Maths,'Computer.science': Computer_science}
    if percentage>Pass:
       print("Sahoday Sr. Sec. School")
       print("Name--> ",name)
       print("Roll No.--> ",roll)
       print("Class--> ",Class)
-      dict_marks={'Physics':Physics,'English':English,'Chemistry':Chemistry,'Maths':Maths,'Computer.science':Computer_science}
+     # dict_marks={'Physics':Physics,'English':English,'Chemistry':Chemistry,'Maths':Maths,'Computer.science':Computer_science}
       print("Marks in 5 subject--> ",dict_marks)
       print("Total marks--> ",Total_marks)
       print("Percentage--> ",percentage)
@@ -31,7 +32,7 @@ while conti=='y' or conti=='Y':
          print("Name--> ", name)
          print("Roll No.--> ", roll)
          print("Class--> ", Class)
-         dict_marks = {'Physics': Physics, 'English': English, 'Chemistry': Chemistry, 'Maths': Maths,'Computer.science': Computer_science}
+       #  dict_marks = {'Physics': Physics, 'English': English, 'Chemistry': Chemistry, 'Maths': Maths,'Computer.science': Computer_science}
          print("Marks in 5 subject--> ", dict_marks)
          print("Total marks--> ", Total_marks)
          print("Percentage--> ", percentage)
@@ -39,6 +40,7 @@ while conti=='y' or conti=='Y':
    else:
       print("Some error occured , No result found")
    conti=input("If you want to continue press y/Y?")
+
 
 
 
